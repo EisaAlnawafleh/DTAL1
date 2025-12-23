@@ -1,14 +1,14 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 // ✅ Monaco client-only
 const Editor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
-const Edit = () => {
+function EditContent() {
   const searchParams = useSearchParams();
   const incomingCode = searchParams.get("code");
 
@@ -22,7 +22,7 @@ const Edit = () => {
   const [code, setCode] = useState(incomingCode || defaultCode);
   const [result, setResult] = useState(incomingCode || defaultCode);
 
-  // ✅ عرّف الثيم فقط في المتصفح
+  // ✅ تعريف الثيم فقط في المتصفح
   useEffect(() => {
     let mounted = true;
 
@@ -64,13 +64,13 @@ const Edit = () => {
           <div className="absolute top-3 right-5 z-50 flex gap-5">
             <Link
               href="/codex"
-              className="bg-red-700 hover:scale-105 transition-all duration-700  rounded text-white px-5 py-1"
+              className="bg-red-700 hover:scale-105 transition-all duration-700 rounded text-white px-5 py-1"
             >
               Back Codex
             </Link>
             <button
               onClick={() => setResult(code)}
-              className="bg-green-600 hover:scale-105 transition-all duration-700text-white px-5 py-1 rounded opacity-90 hover:opacity-100"
+              className="bg-green-600 hover:scale-105 transition-all duration-700 text-white px-5 py-1 rounded opacity-90 hover:opacity-100"
             >
               Run ▶
             </button>
@@ -102,6 +102,12 @@ const Edit = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Edit;
+export default function EditPage() {
+  return (
+    <Suspense fallback={<div className="text-white p-6">Loading editor…</div>}>
+      <EditContent />
+    </Suspense>
+  );
+}
