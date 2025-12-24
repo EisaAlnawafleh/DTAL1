@@ -16,11 +16,11 @@ export default function ClientLayout({ children }) {
     <>
       {!hideNavbar && (
         <>
-          <div className="hidden [@media(min-width:1002px)]:block">
+          <div className="hidden [@media(min-width:900px)]:block">
             <Header />
           </div>
 
-          <div className="block [@media(min-width:1002px)]:hidden sticky top-0 z-[9999]">
+          <div className="block [@media(min-width:900px)]:hidden sticky top-0 z-[9999]">
             <Nav className={``} />
           </div>
         </>

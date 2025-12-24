@@ -39,10 +39,10 @@ const Header = () => {
         data-aos="fade-down"
         data-aos-duration="500"
         data-aos-once="true"
-        className="flex flex-row gap-10 mt-5 mr-10"
+        className="flex flex-row Headerr_text gap-10 mt-5 mr-10"
       >
         <div
-          className={`transition-all duration-700 ${
+          className={`Headerr_text transition-all duration-700 ${
             chatStarted ? "ml-50" : "opacity-100"
           }`}
         >
@@ -98,10 +98,10 @@ const Header = () => {
           </div>
         ) : (
           <>
-            <div className=" cursor-pointer bg-linear-to-r border border-[#7220e4] from-[#7220e4] to-[#f55cfe] px-6 py-1 hover:bg-none hover:border-[#7220e4] rounded-[7px] transition-all duration-500 hover:scale-95 ease-out hover:border hover:opacity-80">
+            <div className=" cursor-pointer Headerr_text_1 bg-linear-to-r border border-[#7220e4] from-[#7220e4] to-[#f55cfe] px-6 py-1 hover:bg-none hover:border-[#7220e4] rounded-[7px] transition-all duration-500 hover:scale-95 ease-out hover:border hover:opacity-80">
               <Link href="/login">Login</Link>
             </div>
-            <div className="cursor-pointer hover:opacity-80 hover:bg-linear-to-r transition-all duration-500 hover:scale-95 ease-out from-[#7220e4] to-[#f55cfe] border-[#7220e4] border px-6 py-1 rounded-[7px]">
+            <div className="cursor-pointer Headerr_text_1 hover:opacity-80 hover:bg-linear-to-r transition-all duration-500 hover:scale-95 ease-out from-[#7220e4] to-[#f55cfe] border-[#7220e4] border px-6 py-1 rounded-[7px]">
               <Link href="/sign">Sign Up</Link>
             </div>
           </>

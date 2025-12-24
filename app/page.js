@@ -55,7 +55,7 @@ export default function Home() {
           <TypedText />
         </div>
 
-        <div className="relative flex justify-center flex-col items-center">
+        <div className="relative flex justify-center flex-col  items-center ">
           <Image
             data-aos="fade-down"
             src="/img/Digital.png"
@@ -65,7 +65,7 @@ export default function Home() {
             className="home_icon"
           />
 
-          <div className="Header-icon-text text-center absolute bottom-0">
+          <div className="Header-icon-text body_icon  text-center absolute bottom-0">
             <div data-aos="fade-up" className="home_text_body text-3xl">
               DTAL
             </div>

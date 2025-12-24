@@ -26,32 +26,52 @@ const Nav = () => {
         </div>
 
         {/* Burger Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className={`relative w-10 h-10 flex flex-col items-center justify-center gap-2.5 transition-transform duration-500 ${
-            open ? "rotate-180" : ""
-          }`}
-        >
-          <span
-            className={`block h-1 rounded bg-purple-400 transition-all duration-500 ${
-              open
-                ? "absolute top-1/2 w-full rotate-45 -translate-y-1/2"
-                : "w-[70%]"
-            }`}
-          />
-          <span
-            className={`block h-1 w-full rounded bg-purple-400 transition-all duration-500 ${
-              open ? "scale-x-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-1 rounded bg-purple-400 transition-all duration-500 ${
-              open
-                ? "absolute top-1/2 w-full -rotate-45 -translate-y-1/2"
-                : "w-[70%]"
-            }`}
-          />
-        </button>
+       <button
+  onClick={() => setOpen(!open)}
+  className={`
+    relative 
+    w-7 h-9 sm:w-8 sm:h-10 
+    md:w-9 md:h-11
+    flex flex-col items-center justify-center
+    gap-2 sm:gap-2.5
+    transition-transform duration-500
+    ${open ? "rotate-180" : ""}
+  `}
+>
+  <span
+    className={`
+      block rounded bg-purple-400
+      h-[3px] sm:h-1
+      transition-all duration-500
+      ${
+        open
+          ? "absolute top-1/2 w-full rotate-45 -translate-y-1/2"
+          : "w-[70%]"
+      }
+    `}
+  />
+  <span
+    className={`
+      block rounded bg-purple-400
+      h-[3px] sm:h-1 w-full
+      transition-all duration-500
+      ${open ? "scale-x-0" : ""}
+    `}
+  />
+  <span
+    className={`
+      block rounded bg-purple-400
+      h-[3px] sm:h-1
+      transition-all duration-500
+      ${
+        open
+          ? "absolute top-1/2 w-full -rotate-45 -translate-y-1/2"
+          : "w-[70%]"
+      }
+    `}
+  />
+</button>
+
       </nav>
 
       {/* ===== Overlay ===== */}
@@ -100,7 +120,7 @@ const Nav = () => {
             </Link>
           </div>
 
-          <div className="absolute bottom-5 left-4 flex flex-col gap-2">
+          <div className="absolute bottom-15 left-4 flex flex-col gap-2">
             <Link href="/login">Login</Link>
             <Link href="/sign">Sign up</Link>
           </div>
