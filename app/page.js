@@ -100,7 +100,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="fixed w-full bottom-20">
+      <div className="fixed w-full bottom-[0%]">
         <SearchBox onSend={() => setChatStarted(true)} />
       </div>
     </div>
