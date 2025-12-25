@@ -27,8 +27,8 @@ const Login = () => {
       <div
         data-aos="fade-up"
         className={` w-274  min-h-150 flex flex-row justify-between   rounded-2xl  shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
-        bg-[linear-gradient(120deg,var(--color-slate-950)_0%,var(--color-slate-950)_50%,var(--color-purple-600)_50%,var(--color-purple-600)_100%)]
-        `}
+      bg-[linear-gradient(120deg,#000000_0%,#000000_50%,#00002e_50%,#00002e_100%)]
+  `}
       >
         <form className="flex flex-col justify-center items-center w-134.25 text-white  min-h-150 ">
           <p className="text-[40px] mb-12">Login</p>
@@ -72,7 +72,7 @@ const Login = () => {
             disabled={loading}
             className="
               w-full max-w-[320px] h-12 rounded-3xl
-              bg-[#6524cc] transition hover:bg-[#7a3de0] hover:scale-105
+              bg-blue-700 transition-all duration-300 hover:bg-blue-950 cursor-pointer
               disabled:opacity-50
             "
           >
@@ -82,7 +82,7 @@ const Login = () => {
           <div className="mt-6 text-sm">
             Don’t have an account?
             <Link href="/sign">
-              <span className="text-[#7a3de0] ml-1 cursor-pointer hover:underline">
+              <span className="text-blue-700 hover:text-blue-500 ml-1 cursor-pointer hover:underline">
                 Sign Up
               </span>
             </Link>
@@ -91,7 +91,7 @@ const Login = () => {
 
         <div>
           <div className="flex flex-col text-center gap-3 text-white relative justify-center items-center h-full w-134.25 ">
-            <div className="absolute top-28 left-42 opacity-75">
+            <div className="absolute top-28 left-47 opacity-75">
            
               <Link href="/">
                 <Image src="/img/img.png" alt="logo" width={160} height={60} />
@@ -99,8 +99,8 @@ const Login = () => {
             </div>
 
             <div className={`text-5xl`}>Welcome</div>
-            <div className={`text-5xl ml-10`}>Back!</div>
-            <div className={`ml-60`}>Sign in to access your dashboard.</div>
+            <div className={`text-5xl`}>Back!</div>
+            <div className={``}>Sign in to access your dashboard.</div>
           </div>
         </div>
       </div>

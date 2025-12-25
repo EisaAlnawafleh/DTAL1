@@ -145,9 +145,9 @@ const Codex = () => {
         ))}
       </div>
 
-      <div className="w-full py-4 border-t border-white/10">
-        <div className="relative max-w-xl w-full mx-auto">
-          <div className="relative flex flex-col">
+      <div className="w-full py-4 border-t border-white/10 flex justify-center">
+        <div className="relative max-w-xl flex w-full  mx-5 ">
+          <div className="relative w-full flex flex-col">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}

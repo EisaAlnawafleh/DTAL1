@@ -119,11 +119,11 @@ const Nav = () => {
               </div>
             </Link>
           </div>
-
-          <div className="absolute bottom-15 left-4 flex flex-col gap-2">
-            <Link href="/login">Login</Link>
-            <Link href="/sign">Sign up</Link>
+<Link href="/auth">
+          <div className="absolute bottom-15 left-6 flex flex-col gap-2 border w-[80%] text-center py-1 rounded-[5px] cursor-pointer transition-all duration-300]">
+            Get Started
           </div>
+</Link>
         </div>
       )}
     </>

@@ -5,7 +5,6 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-// ✅ Monaco client-only
 const Editor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
 function EditContent() {
@@ -22,7 +21,6 @@ function EditContent() {
   const [code, setCode] = useState(incomingCode || defaultCode);
   const [result, setResult] = useState(incomingCode || defaultCode);
 
-  // ✅ تعريف الثيم فقط في المتصفح
   useEffect(() => {
     let mounted = true;
 

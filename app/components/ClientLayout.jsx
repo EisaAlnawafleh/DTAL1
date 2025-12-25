@@ -7,7 +7,7 @@ import Nav from "../components/header_nav";
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
 
-  const hideNavbarRoutes = ["/login", "/sign", "/codex/edit"];
+  const hideNavbarRoutes = ["/login", "/sign", "/codex/edit","/auth"];
   const hideNavbar = hideNavbarRoutes.some((route) =>
     pathname.startsWith(route)
   );

@@ -67,13 +67,13 @@ const SignUp = () => {
       <div
         data-aos="fade-up"
         className={` w-274  min-h-150 flex flex-row justify-between   rounded-2xl  shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
-       bg-[linear-gradient(120deg,var(--color-purple-600)_0%,var(--color-purple-600)_50%,var(--color-slate-950)_50%,var(--color-slate-950)_100%)]
+      bg-[linear-gradient(120deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
 
         `}
       >
         <div>
           <div className="flex pr-30 flex-col text-center gap-3 text-white relative justify-center items-center h-full w-134.25 ">
-            <div className="absolute top-37 left-27 opacity-75">
+            <div className="absolute top-37 left-30 opacity-75">
               <Link href="/">
                 <Image src="/img/img.png" alt="logo" width={160} height={60} />
               </Link>
@@ -81,7 +81,7 @@ const SignUp = () => {
 
             <div className={`text-5xl`}>Welcome</div>
 
-            <div className={`ml-30`}>Create your account to get started.</div>
+            <div className={``}>Create your account to get started.</div>
           </div>
         </div>
         <form
@@ -138,9 +138,9 @@ const SignUp = () => {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#6524cc] h-12.5 w-75 rounded-3xl cursor-pointer
-              transition-transform duration-200 hover:bg-[#7a3de0]
-             hover:scale-105
+              className=" h-12.5 w-75 rounded-3xl 
+               bg-blue-700 transition-all duration-300 hover:bg-blue-950 cursor-pointer
+
                disabled:opacity-50"
             >
               {loading ? "Creating account..." : "Sign Up"}
@@ -151,9 +151,8 @@ const SignUp = () => {
             Already have an account?
             <Link href="/login">
               <span
-                className="text-[#4b2c8b] ml-1 cursor-pointer  
-              transition-transform duration-200 hover:text-[#7a3de0]
-           
+                className="text-blue-700 hover:text-blue-500 ml-1 cursor-pointer  
+              transition-transform duration-200 
               
               "
               >
