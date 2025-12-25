@@ -46,18 +46,16 @@ const Pdf = () => {
 
   return (
     <div className="bg-[#0b0b10] w-screen h-screen pt-50 text-white flex flex-col">
-     
-
-      <div className="text-center text-[48px]">
+      <div className="text-center text-[48px] pdf_text">
         <TypedText1 />
       </div>
 
-      <div className="flex justify-center text-[30px] mt-20">
+      <div className="flex justify-center text-[24px] mt-7 pdf_text_1 ">
         SPEECH TO PDF Converter
       </div>
 
-      <div className="flex justify-center items-center mt-10 flex-col px-10">
-        <div className="text-center max-w-[900px]">
+      <div className="flex justify-center  items-center pdf_text_2 mt-35 flex-col px-10">
+        <div className="text-center ">
           Convert your speech into polished PDF documents quickly and accurately
           using our AI-powered speech-to-text tool.
         </div>
@@ -73,8 +71,8 @@ const Pdf = () => {
             focus:border-[#868d8e]
             border
             border-[#e3e5e9]
-            w-[1021px]
-            h-[248px]
+            w-[70%]
+            min-h-[100%]
             mt-10
             resize-none
             p-4

@@ -19,16 +19,16 @@ const Nav = () => {
   return (
     <>
       {/* ===== Navbar Bar (NOT fixed, NOT h-screen) ===== */}
-      <nav className="  fixed w-full px-2 top-4  text-white flex items-center justify-between   z-50">
+      <nav className="  fixed w-full  px-2 top-4  text-white flex items-center justify-between   z-50">
         {/* Logo */}
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#7220e4] to-[#f55cfe] font-bold">
           DTAL.COM
         </div>
 
         {/* Burger Button */}
-       <button
-  onClick={() => setOpen(!open)}
-  className={`
+        <button
+          onClick={() => setOpen(!open)}
+          className={`
     relative 
     w-7 h-9 sm:w-8 sm:h-10 
     md:w-9 md:h-11
@@ -37,41 +37,34 @@ const Nav = () => {
     transition-transform duration-500
     ${open ? "rotate-180" : ""}
   `}
->
-  <span
-    className={`
+        >
+          <span
+            className={`
       block rounded bg-purple-400
       h-[3px] sm:h-1
       transition-all duration-500
-      ${
-        open
-          ? "absolute top-1/2 w-full rotate-45 -translate-y-1/2"
-          : "w-[70%]"
-      }
+      ${open ? "absolute top-1/2 w-full rotate-45 -translate-y-1/2" : "w-[70%]"}
     `}
-  />
-  <span
-    className={`
+          />
+          <span
+            className={`
       block rounded bg-purple-400
       h-[3px] sm:h-1 w-full
       transition-all duration-500
       ${open ? "scale-x-0" : ""}
     `}
-  />
-  <span
-    className={`
+          />
+          <span
+            className={`
       block rounded bg-purple-400
       h-[3px] sm:h-1
       transition-all duration-500
       ${
-        open
-          ? "absolute top-1/2 w-full -rotate-45 -translate-y-1/2"
-          : "w-[70%]"
+        open ? "absolute top-1/2 w-full -rotate-45 -translate-y-1/2" : "w-[70%]"
       }
     `}
-  />
-</button>
-
+          />
+        </button>
       </nav>
 
       {/* ===== Overlay ===== */}
@@ -100,8 +93,10 @@ const Nav = () => {
               DTAL.COM
             </div>
           </Link>
+<div className={`flex flex-col justify-between h-full`}>
 
-          <div className="flex flex-col gap-3 pt-6">
+
+          <div className="flex flex-col  gap-3 pt-6">
             <Link href="/">
               <div className="bg-[#1b1c1d] px-3 py-2 rounded-xl">Home</div>
             </Link>
@@ -119,11 +114,12 @@ const Nav = () => {
               </div>
             </Link>
           </div>
-<Link href="/auth">
-          <div className="absolute bottom-15 left-6 flex flex-col gap-2 border w-[80%] text-center py-1 rounded-[5px] cursor-pointer transition-all duration-300]">
-            Get Started
+          <Link href="/auth">
+            <div className=" mb-[20%]  justify-center items-center flex flex-col flex-1  gap-2 border w-[80%] text-center py-1 rounded-[5px] cursor-pointer transition-all duration-300]">
+              Get Started
+            </div>
+          </Link>
           </div>
-</Link>
         </div>
       )}
     </>
