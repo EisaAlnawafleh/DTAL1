@@ -8,6 +8,7 @@ import Link from "next/link";
 const Editor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
 function EditContent() {
+  const [mode, setMode] = useState("split");
   const searchParams = useSearchParams();
   const incomingCode = searchParams.get("code");
 
@@ -57,8 +58,20 @@ function EditContent() {
         <span className="font-semibold ">Codex Editor</span>
       </div>
 
-      <div className="flex w-full h-full edit_codex ">
-        <div className="w-1/2 relative">
+      <div
+        className={`flex w-full h-full edit_codex  ${
+          mode === "split"
+            ? ""
+            : mode === "editor"
+            ? "editor-only"
+            : "preview-only"
+        }`}
+      >
+        <div
+          className={`relative ${
+            mode === "split" ? "w-1/2" : mode === "editor" ? "w-full" : "hidden"
+          }`}
+        >
           <div className="absolute top-3 right-15 z-50 flex gap-5">
             <Link
               href="/codex"
@@ -90,7 +103,15 @@ function EditContent() {
           />
         </div>
 
-        <div className="w-1/2 bg-white border-l">
+        <div
+          className={`bg-white border-l ${
+            mode === "split"
+              ? "w-1/2"
+              : mode === "preview"
+              ? "w-full"
+              : "hidden"
+          }`}
+        >
           <iframe
             className="w-full h-full"
             srcDoc={result}
@@ -98,6 +119,32 @@ function EditContent() {
           />
         </div>
       </div>
+    <div className="fixed bottom-3 right-4 z-50 flex gap-2">
+  <button
+    onClick={() => setMode("editor")}
+    className="w-8 h-8 rounded bg-[#1b1c1d] text-white border border-white/20 hover:bg-[#2a2c2f]"
+    title="Editor Full"
+  >
+    ⬛
+  </button>
+
+  <button
+    onClick={() => setMode("split")}
+    className="w-8 h-8 rounded bg-[#1b1c1d] text-white border border-white/20 hover:bg-[#2a2c2f]"
+    title="Split"
+  >
+    ⬜
+  </button>
+
+  <button
+    onClick={() => setMode("preview")}
+    className="w-8 h-8 rounded bg-[#1b1c1d] text-white border border-white/20 hover:bg-[#2a2c2f]"
+    title="Preview Full"
+  >
+    ◻
+  </button>
+</div>
+
     </div>
   );
 }

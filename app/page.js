@@ -30,12 +30,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className=" text-white  h-screen w-full pt-30">
+    <div className=" text-white h-[2000px] w-full pt-30">
       {mounted && (
         <div
           className={`transition-all duration-700 ${
             chatStarted
-              ? "opacity-0 scale-95 pointer-events-none"
+              ? "opacity-0 scale-95   pointer-events-none"
               : "opacity-100"
           }`}
         >

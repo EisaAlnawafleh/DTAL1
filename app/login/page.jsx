@@ -23,17 +23,29 @@ const Login = () => {
   }, []);
 
   return (
-    <div className={`flex justify-center items-center mt-40 `}>
+    <div className="flex justify-center items-center min-h-screen px-4">
       <div
         data-aos="fade-up"
-        className={` w-274  min-h-150 flex flex-row justify-between   rounded-2xl  shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
-      bg-[linear-gradient(120deg,#000000_0%,#000000_50%,#00002e_50%,#00002e_100%)]
-  `}
+        className="
+         gap-[25%]
+          w-full max-w-[1100px]
+          min-h-[600px]
+          flex flex-col lg:flex-row
+          rounded-2xl
+          shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
+          bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
+        "
       >
-        <form className="flex flex-col justify-center items-center w-134.25 text-white  min-h-150 ">
-          <p className="text-[40px] mb-12">Login</p>
+        <form className="flex flex-col  justify-center items-center text-white w-full lg:w-1/2 px-6 py-12">
+          <div className=" lg:hidden">
+            <Link href="/">
+              <Image src="/img/img.png" alt="logo" width={150} height={50} />
+            </Link>
+          </div>
 
-          <div className="relative w-full max-w-[320px] mb-8">
+          <p className="text-[36px] mb-12">Login</p>
+
+          <div className="relative w-full max-w-[320px] mb-8 ">
             <input
               className="
                 w-full bg-transparent border-0 border-b-2 border-gray-600
@@ -71,8 +83,9 @@ const Login = () => {
             type="submit"
             disabled={loading}
             className="
-              w-full max-w-[320px] h-12 rounded-3xl
-              bg-blue-700 transition-all duration-300 hover:bg-blue-950 cursor-pointer
+              w-full max-w-[320px] h-12 rounded-[10px]
+              bg-blue-700 transition-all duration-300
+              hover:bg-blue-950 cursor-pointer
               disabled:opacity-50
             "
           >
@@ -89,18 +102,18 @@ const Login = () => {
           </div>
         </form>
 
-        <div>
-          <div className="flex flex-col text-center gap-3 text-white relative justify-center items-center h-full w-134.25 ">
-            <div className="absolute top-28 left-47 opacity-75">
-           
+        {/* ===== Welcome (Desktop فقط) ===== */}
+        <div className="hidden lg:flex w-1/2 text-white justify-center items-center relative overflow-hidden">
+          <div className="flex flex-col text-center gap-3 max-w-[90%]">
+            <div className="absolute top-0 right-0 ">
               <Link href="/">
                 <Image src="/img/img.png" alt="logo" width={160} height={60} />
               </Link>
             </div>
 
-            <div className={`text-5xl`}>Welcome</div>
-            <div className={`text-5xl`}>Back!</div>
-            <div className={``}>Sign in to access your dashboard.</div>
+            <div className="text-5xl whitespace-nowrap">Welcome</div>
+            <div className="text-5xl whitespace-nowrap">Back!</div>
+            <div>Sign in to access your dashboard.</div>
           </div>
         </div>
       </div>
@@ -109,4 +122,3 @@ const Login = () => {
 };
 
 export default Login;
-

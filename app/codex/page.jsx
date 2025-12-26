@@ -123,7 +123,7 @@ const Codex = () => {
                     `/codex/edit?code=${encodeURIComponent(msg.content)}`
                   )
                 }
-                className="bg-[#0f172a] text-white p-4 rounded-xl text-sm font-mono 
+                className="bg-[#0f172a] text-white p-4 mb-5 rounded-xl text-sm font-mono 
                 overflow-x-auto cursor-pointer
                 hover:ring-2 hover:ring-sky-500 transition"
               >

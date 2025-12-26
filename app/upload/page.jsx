@@ -43,7 +43,7 @@ const Upload = () => {
           Use our online video to text converter to generate accurate video
           transcripts in minutes.
         </div>
-        <div className={`flex justify-center items-center  mt-5   `}>
+        <div className={`flex justify-center items-center  mt-5 upload_1  `}>
           <div
             data-aos="fade-up"
             data-aos-delay="200"
@@ -85,8 +85,8 @@ px-4 py-1 rounded-2xl `}
                   />
 
                   <div
-                    data-aos="fade-up"
-                    className="upload_text_2 pointer-events-none mx-4 text-white"
+                    // data-aos="fade-up"
+                    className="upload_text_2 text-center justify-center items-center pointer-events-none mx-4 text-white"
                   >
                     Upload your video & get transcript
                   </div>

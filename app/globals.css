@@ -119,6 +119,7 @@ body {
   height: 100%;
 }
 
+
 /* ===== 1001px ===== */
 @media (max-width: 1001px) {
   .home_text {
@@ -406,19 +407,22 @@ body {
     right: 15%;
   }
   .codex_e {
-    opacity: 0;
+    display: none;
   }
   .upload_text_3{
 
      display: none;
+  }
+  .upload_1{
+    height: 150px;
   }
    .upload_img{
     
     display: none;
   }
   .file_upload{
-   position: fixed;
-   opacity: 0;
+  
+   display: none;
   }
   .edit_b {
     position: fixed;
@@ -446,9 +450,7 @@ body {
   .pdf_text_2 {
     font-size: 5px;
   }
-  .pdf_text {
-    font-size: 15px;
-  }
+  
   .pdf_text_1 {
     font-size: 10px;
   }

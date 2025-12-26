@@ -55,44 +55,7 @@ const Pdf = () => {
         <div className="text-center text-[48px] pdf_text">
           <TypedText1 />
         </div>
-
-        <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
-          <div
-            className="
-              mt-10
-              w-full
-              max-w-[900px]
-              sm:w-[90%]
-              md:w-[80%]
-              lg:w-[60%]
-              backdrop-blur-xl
-              bg-white/5
-              border border-white/10
-              rounded-2xl
-              shadow-[0_20px_60px_rgba(0,0,0,0.4)]
-              p-4
-            "
-          >
-            <textarea
-              placeholder="Your text will appear here..."
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              className="
-                w-full
-                min-h-[220px]
-                max-h-[320px]
-                bg-transparent
-                text-white
-                      
-                resize-none
-                outline-none
-                placeholder:text-white/40
-                leading-relaxed
-              "
-            />
-          </div>
-
-          <div className="flex items-center gap-6 mt-8">
+         <div className="flex items-center justify-center gap-5 mt-20 ">
             <button
               onClick={startSpeech}
               className="
@@ -120,6 +83,45 @@ const Pdf = () => {
               Download PDF
             </button>
           </div>
+
+        <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
+          <div
+            className="
+              mt-10
+              w-full
+              max-w-[900px]
+              sm:w-[90%]
+              md:w-[80%]
+              lg:w-[60%]
+              backdrop-blur-xl
+              bg-white/5
+              border border-white/10
+              rounded-2xl
+              shadow-[0_20px_60px_rgba(0,0,0,0.4)]
+              p-4
+            "
+          >
+            <textarea
+              placeholder="Your text will appear here..."
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              className="
+                w-full
+                text-[20px]
+                min-h-[220px]
+                max-h-[320px]
+                bg-transparent
+                text-white
+                      
+                resize-none
+                outline-none
+                placeholder:text-white/40
+                leading-relaxed
+              "
+            />
+          </div>
+
+         
         </div>
       </div>
 
