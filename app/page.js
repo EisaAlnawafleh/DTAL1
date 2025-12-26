@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className=" text-white h-[2000px] w-full pt-30">
+    <div className=" text-white h-full w-full pt-30">
       {mounted && (
         <div
           className={`transition-all duration-700 ${
