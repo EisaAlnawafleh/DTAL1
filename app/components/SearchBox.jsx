@@ -47,7 +47,7 @@ export default function SearchBox({ onSend }) {
             pr-[10%]
           
             "
-            placeholder="Search the web..."
+            placeholder="Type your question here !"
           />
 
          

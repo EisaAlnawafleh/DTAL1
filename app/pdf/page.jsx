@@ -57,8 +57,6 @@ const Pdf = () => {
         </div>
 
         <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
-       
-     
           <div
             className="
               mt-10
@@ -85,6 +83,7 @@ const Pdf = () => {
                 max-h-[320px]
                 bg-transparent
                 text-white
+                      
                 resize-none
                 outline-none
                 placeholder:text-white/40
