@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import jsPDF from "jspdf";
 import TypedText1 from "../components/TypedText1";
-import Header from "../components/Header";
+import SearchBox from "../components/SearchBox";
 
 const Pdf = () => {
+  const [chatStarted, setChatStarted] = useState(false);
   const [text, setText] = useState("");
 
   const startSpeech = () => {
@@ -45,71 +46,86 @@ const Pdf = () => {
   };
 
   return (
-    <div className="bg-[#0b0b10] w-screen h-screen pt-50 text-white flex flex-col">
-      <div className="text-center text-[48px] pdf_text">
-        <TypedText1 />
-      </div>
-
-      <div className="flex justify-center text-[24px] mt-7 pdf_text_1 ">
-        SPEECH TO PDF Converter
-      </div>
-
-      <div className="flex justify-center  items-center pdf_text_2 mt-35 flex-col px-10">
-        <div className="text-center ">
-          Convert your speech into polished PDF documents quickly and accurately
-          using our AI-powered speech-to-text tool.
+    <div className="bg-[#101019] w-screen h-screen pt-40 text-white flex flex-col">
+      <div
+        className={`transition-all duration-700 ${
+          chatStarted ? "opacity-0 scale-95 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        <div className="text-center text-[48px] pdf_text">
+          <TypedText1 />
         </div>
 
-        <textarea
-          placeholder="Your text will appear here ..."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          className="
-          text-white
-            focus:outline-none
-            focus:border-dashed
-            focus:border-[#868d8e]
-            border
-            border-[#e3e5e9]
-            w-[70%]
-            min-h-[100%]
-            mt-10
-            resize-none
-            p-4
-          "
-        ></textarea>
-
-        <div className="flex items-center gap-6 mt-6">
-          <button
-            onClick={startSpeech}
+        <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
+       
+     
+          <div
             className="
-              bg-black text-white
-              px-6 py-3
-              rounded-full
-              font-medium
-             
-              hover:bg-neutral-800
-              active:scale-95
-              transition-all duration-500 hover:scale-95 ease-out
+              mt-10
+              w-full
+              max-w-[900px]
+              sm:w-[90%]
+              md:w-[80%]
+              lg:w-[60%]
+              backdrop-blur-xl
+              bg-white/5
+              border border-white/10
+              rounded-2xl
+              shadow-[0_20px_60px_rgba(0,0,0,0.4)]
+              p-4
             "
           >
-            Start Speech
-          </button>
+            <textarea
+              placeholder="Your text will appear here..."
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              className="
+                w-full
+                min-h-[220px]
+                max-h-[320px]
+                bg-transparent
+                text-white
+                resize-none
+                outline-none
+                placeholder:text-white/40
+                leading-relaxed
+              "
+            />
+          </div>
 
-          <button
-            onClick={downloadPDF}
-            className="
-              
-              font-medium
-           
-              hover:underline
-              underline-offset-4
-              transition-all duration-500 hover:scale-95 ease-out
-            "
-          >
-            Download PDF
-          </button>
+          <div className="flex items-center gap-6 mt-8">
+            <button
+              onClick={startSpeech}
+              className="
+                bg-black text-white
+                px-6 py-3
+                rounded-full
+                font-medium
+                hover:bg-neutral-800
+                active:scale-95
+                transition-all duration-500
+              "
+            >
+              Start Speech
+            </button>
+
+            <button
+              onClick={downloadPDF}
+              className="
+                font-medium
+                hover:underline
+                underline-offset-4
+                transition-all duration-500 hover:scale-95
+              "
+            >
+              Download PDF
+            </button>
+          </div>
         </div>
+      </div>
+
+      <div className="fixed w-full bottom-0">
+        <SearchBox onSend={() => setChatStarted(true)} />
       </div>
     </div>
   );
