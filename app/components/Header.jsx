@@ -34,14 +34,14 @@ const Header = () => {
   }, []);
   return (
     <div
-      className={`fixed z-50   pb-5 w-full text-white 
-    ${
-      scrolled
-        ? "bg-black/40 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/10"
-        : "bg-transparent"
-    }
-    
-    `}
+      className={`fixed z-50 pb-5 w-full  text-white
+  transition-all duration-500 ease-out
+  ${
+    scrolled
+      ? "bg-black/40 backdrop-blur-2xl backdrop-saturate-150  "
+      : "bg-transparent"
+  }
+  `}
     >
       <div className={`flex flex-row justify-between`}>
         <div className="flex flex-row items-center justify-between">

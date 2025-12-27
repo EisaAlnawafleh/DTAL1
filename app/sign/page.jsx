@@ -55,19 +55,30 @@ const SignUp = () => {
         data-aos="fade-up"
         className="
           w-full max-w-[1100px]
-          gap-[25%]
           min-h-[600px]
-          flex flex-col md:flex-row
+          flex flex-col lg:flex-row
+          gap-[38%]
           rounded-2xl
           shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
+
           bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-        "
+lg:bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
+bg-[linear-gradient(to_bottom,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
+
+           "
       >
+     
         <form
           onSubmit={handleSignUp}
-          className="flex flex-col  justify-center items-center text-white w-full md:w-1/2 px-6 py-12"
+          className="
+            flex flex-col justify-center items-center
+            text-white w-full lg:w-1/2
+            
+            px-6 py-12
+          "
         >
-          <div className="md:hidden">
+        
+          <div className="lg:hidden">
             <Link href="/">
               <Image src="/img/img.png" alt="logo" width={150} height={50} />
             </Link>
@@ -148,9 +159,9 @@ const SignUp = () => {
           </div>
         </form>
 
-        <div className="hidden md:flex w-1/2 text-white justify-center items-center relative">
+        <div className="hidden lg:flex w-1/2 text-white justify-center items-center relative">
           <div className="flex flex-col text-center gap-3">
-            <div className="absolute top-0 right-0 ">
+            <div className="absolute top-0 right-0">
               <Link href="/">
                 <Image src="/img/img.png" alt="logo" width={160} height={60} />
               </Link>

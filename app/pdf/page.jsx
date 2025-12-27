@@ -46,7 +46,20 @@ const Pdf = () => {
   };
 
   return (
-    <div className="bg-[#101019] w-screen h-screen pt-40 text-white flex flex-col">
+    <div
+      className="
+  bg-[#101019]
+  w-screen
+  min-h-screen
+  pt-40
+  
+  sm:pb-[180px]
+  md:pb-[200px]
+  text-white
+  flex
+  flex-col
+"
+    >
       <div
         className={`transition-all duration-700 ${
           chatStarted ? "opacity-0 scale-95 pointer-events-none" : "opacity-100"
@@ -55,39 +68,24 @@ const Pdf = () => {
         <div className="text-center text-[48px] pdf_text">
           <TypedText1 />
         </div>
-         <div className="flex items-center justify-center gap-5 mt-20 ">
-            <button
-              onClick={startSpeech}
-              className="
-                bg-black text-white
-                px-6 py-3
-                rounded-full
-                font-medium
-                hover:bg-neutral-800
-                active:scale-95
-                transition-all duration-500
-              "
-            >
-              Start Speech
-            </button>
-
-            <button
-              onClick={downloadPDF}
-              className="
-                font-medium
+        <div className="flex items-center justify-center  mt-15 ">
+          <button
+            onClick={downloadPDF}
+            className="
+            text-[20px]
                 hover:underline
                 underline-offset-4
                 transition-all duration-500 hover:scale-95
               "
-            >
-              Download PDF
-            </button>
-          </div>
+          >
+            Download PDF
+          </button>
+        </div>
 
         <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
           <div
             className="
-              mt-10
+              
               w-full
               max-w-[900px]
               sm:w-[90%]
@@ -105,23 +103,23 @@ const Pdf = () => {
               placeholder="Your text will appear here..."
               value={text}
               onChange={(e) => setText(e.target.value)}
+              rows={3}
               className="
-                w-full
-                text-[20px]
-                min-h-[220px]
-                max-h-[320px]
-                bg-transparent
-                text-white
-                      
-                resize-none
-                outline-none
-                placeholder:text-white/40
-                leading-relaxed
-              "
+    w-full
+    text-[20px]
+    bg-transparent
+    text-white
+    resize-none
+    outline-none
+    placeholder:text-white/40
+    leading-relaxed
+
+    overflow-y-auto
+    max-h-[120px]
+    scrollbar-none
+  "
             />
           </div>
-
-         
         </div>
       </div>
 

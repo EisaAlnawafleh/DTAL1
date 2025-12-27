@@ -91,20 +91,7 @@ px-4 py-1 rounded-2xl `}
                     Upload your video & get transcript
                   </div>
 
-                  <div
-                    data-aos="zoom-in"
-                    data-aos-delay="400"
-                    className="bg-[#004ae5] upload_text_3  py-2 px-5 rounded-xl justify-center items-center  flex flex-row gap-3 text-white
-               cursor-pointer hover:opacity-75 hover:scale-95
-               shadow-[0_12px_35px_rgba(37,99,235,0.35)]
-
-               "
-                  >
-                    <i className="ri-download-2-line text-[12px] upload_text_img_3"></i>
-                    <div className={`pt-1 text-[14px] upload_text_4`}>
-                      Upload a file
-                    </div>
-                  </div>
+                 
                 </>
               )}
               {videoSelected && (

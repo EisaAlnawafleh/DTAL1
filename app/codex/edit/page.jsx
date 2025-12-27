@@ -122,7 +122,7 @@ function EditContent() {
     <div className="fixed bottom-3 right-4 z-50 flex gap-2">
   <button
     onClick={() => setMode("editor")}
-    className="w-8 h-8 rounded bg-[#1b1c1d] text-white border border-white/20 hover:bg-[#2a2c2f]"
+    className="w-8 h-8 rounded bg-[#1b1c1d] codex_edit_1 text-white border border-white/20 hover:bg-[#2a2c2f]"
     title="Editor Full"
   >
     ⬛
@@ -130,7 +130,7 @@ function EditContent() {
 
   <button
     onClick={() => setMode("split")}
-    className="w-8 h-8 rounded bg-[#1b1c1d] text-white border border-white/20 hover:bg-[#2a2c2f]"
+    className="w-8 h-8 rounded bg-[#1b1c1d] codex_edit_1 text-white border border-white/20 hover:bg-[#2a2c2f]"
     title="Split"
   >
     ⬜
@@ -138,7 +138,7 @@ function EditContent() {
 
   <button
     onClick={() => setMode("preview")}
-    className="w-8 h-8 rounded bg-[#1b1c1d] text-white border border-white/20 hover:bg-[#2a2c2f]"
+    className="w-8 h-8 rounded bg-[#1b1c1d] codex_edit_1 text-white border border-white/20 hover:bg-[#2a2c2f]"
     title="Preview Full"
   >
     ◻

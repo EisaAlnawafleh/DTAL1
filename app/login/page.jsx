@@ -34,7 +34,11 @@ const Login = () => {
           rounded-2xl
           shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
           bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-        "
+lg:bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
+bg-[linear-gradient(to_bottom,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
+
+          
+          "
       >
         <form className="flex flex-col  justify-center items-center text-white w-full lg:w-1/2 px-6 py-12">
           <div className=" lg:hidden">
@@ -102,7 +106,7 @@ const Login = () => {
           </div>
         </form>
 
-        {/* ===== Welcome (Desktop فقط) ===== */}
+       
         <div className="hidden lg:flex w-1/2 text-white justify-center items-center relative overflow-hidden">
           <div className="flex flex-col text-center gap-3 max-w-[90%]">
             <div className="absolute top-0 right-0 ">

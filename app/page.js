@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import SearchBox from "./components/SearchBox";
 import Image from "next/image";
 import AOS from "aos";
@@ -82,7 +81,7 @@ export default function Home() {
         <div
           data-aos="fade"
           data-aos-delay="300"
-          className="home_text_body_1 mt-10 max-w-[600px] text-center px-4 mx-auto flex flex-wrap justify-center gap-1.5"
+          className="home_text_body_1 mt-10 max-w-150 text-center px-4 mx-auto flex flex-wrap justify-center gap-1.5"
         >
           <span>Work smarter with</span>
           <span className="underline underline-offset-4 cursor-pointer">
