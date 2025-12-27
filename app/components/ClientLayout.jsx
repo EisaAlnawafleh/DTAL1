@@ -7,10 +7,14 @@ import Nav from "../components/header_nav";
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
 
-  const hideNavbarRoutes = ["/login", "/sign", "/codex/edit","/auth"];
-  const hideNavbar = hideNavbarRoutes.some((route) =>
-    pathname.startsWith(route)
-  );
+  const hideNavbarRoutes = ["/", "/login", "/sign", "/auth", "/codex/edit"];
+
+  const hideNavbar = hideNavbarRoutes.some((route) => {
+    if (route === "/") {
+      return pathname === "/";
+    }
+    return pathname === route || pathname.startsWith(route + "/");
+  });
 
   return (
     <>
@@ -21,7 +25,7 @@ export default function ClientLayout({ children }) {
           </div>
 
           <div className="block [@media(min-width:900px)]:hidden sticky top-0 z-[9999]">
-            <Nav className={``} />
+            <Nav />
           </div>
         </>
       )}

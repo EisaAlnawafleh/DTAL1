@@ -8,16 +8,16 @@ export default function Splash() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/home");
+      router.replace("/home"); // ✅ مش /
     }, 2500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [router]);
 
   return (
     <div className="h-screen w-full flex items-center justify-center bg-[#1b1c1d]">
       <div className="flex flex-col items-center gap-4 animate-pulse">
-        <img src="img/img.png" alt="Logo" className="w-[50%] h-[50%]" />
+        <img src="/img.png" alt="Logo" className="w-24 h-24" />
         <p className="text-white text-sm tracking-widest">Welcome to DTAL...</p>
       </div>
     </div>
