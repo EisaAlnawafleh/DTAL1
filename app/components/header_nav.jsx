@@ -104,7 +104,7 @@ const Nav = () => {
           </Link>
           <div className={`flex flex-col gap-[5%] h-full`}>
             <div className="flex flex-col  gap-3 pt-6">
-              <Link href="/" className={linkClass("/")}>
+              <Link href="/" className={linkClass("/home")}>
                 <div className=" focus:bg-[#1b1c1d] focus:rounded-xl px-3 py-2 ">
                   Home
                 </div>
