@@ -54,8 +54,8 @@ bg-white/5  justify-center items-center flex flex-col gap-10  shadow-[0_20px_60p
             <div className={`flex  justify-center file_upload`}>
               <Link href="/upload">
                 <div
-                  // data-aos="zoom-in"
-                  // data-aos-delay="400"
+                  data-aos="zoom-in"
+                  data-aos-delay="400"
                   className={`bg-white/10  hover:scale-95 file_upload text-white border border-white/10
 px-4 py-1 rounded-2xl `}
                 >
@@ -85,7 +85,7 @@ px-4 py-1 rounded-2xl `}
                   />
 
                   <div
-                    // data-aos="fade-up"
+                    data-aos="fade-up"
                     className="upload_text_2 text-center justify-center items-center pointer-events-none mx-4 text-white"
                   >
                     Upload your video & get transcript
