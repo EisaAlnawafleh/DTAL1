@@ -33,21 +33,20 @@ const Login = () => {
           flex flex-col lg:flex-row
           rounded-2xl
           shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
-          bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-lg:bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-bg-[linear-gradient(to_bottom,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-
+         bg-[linear-gradient(135deg,#00002e_0%,#00002e_35%,#00001a_55%,#000000_75%,#000000_100%)]
+    lg:bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
+   
           
           "
       >
         <form className="flex flex-col  justify-center items-center text-white w-full lg:w-1/2 px-6 py-12">
-          <div className=" lg:hidden">
+          <div className=" lg:hidden  ">
             <Link href="/">
               <Image src="/img/img.png" alt="logo" width={150} height={50} />
             </Link>
           </div>
 
-          <p className="text-[36px] mb-12">Login</p>
+          <p className="text-[36px] mb-6">Login</p>
 
           <div className="relative w-full max-w-[320px] mb-8 ">
             <input
@@ -106,7 +105,6 @@ bg-[linear-gradient(to_bottom,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
           </div>
         </form>
 
-       
         <div className="hidden lg:flex w-1/2 text-white justify-center items-center relative overflow-hidden">
           <div className="flex flex-col text-center gap-3 max-w-[90%]">
             <div className="absolute top-0 right-0 ">

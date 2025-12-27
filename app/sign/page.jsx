@@ -61,10 +61,8 @@ const SignUp = () => {
           rounded-2xl
           shadow-[0_0_60px_1px_rgba(138,43,226,0.1)]
 
-          bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-lg:bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-bg-[linear-gradient(to_bottom,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
-
+         bg-[linear-gradient(135deg,#00002e_0%,#00002e_35%,#00001a_55%,#000000_75%,#000000_100%)]
+    lg:bg-[linear-gradient(135deg,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
            "
       >
      
@@ -84,7 +82,7 @@ bg-[linear-gradient(to_bottom,#00002e_0%,#00002e_50%,#000000_50%,#000000_100%)]
             </Link>
           </div>
 
-          <p className="text-[36px] mb-12">Sign Up</p>
+          <p className="text-[36px] mb-6">Sign Up</p>
 
           <div className="relative w-full max-w-[320px] mb-8">
             <input
