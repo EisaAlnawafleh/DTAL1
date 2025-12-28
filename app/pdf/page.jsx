@@ -1,13 +1,21 @@
 "use client";
 
-
 import { useState } from "react";
 import jsPDF from "jspdf";
 import TypedText1 from "../components/TypedText1";
 import SearchBox from "../components/SearchBox";
 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Pdf = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: true,
+    });
+  }, []);
   const [chatStarted, setChatStarted] = useState(false);
   const [text, setText] = useState("");
 
@@ -74,20 +82,69 @@ const Pdf = () => {
           </div>
           <div className="flex items-center justify-center  mt-15 ">
             <button
+              data-aos="fade-right"
               onClick={downloadPDF}
               className="
-            text-[20px]
-                hover:underline
-                underline-offset-4
-                transition-all duration-500 hover:scale-95
-              "
+    group
+    relative
+
+    px-6 py-3
+    sm:px-7 sm:py-3
+    md:px-8 md:py-3.5
+
+    text-[15px]
+    sm:text-[16px]
+    md:text-[18px]
+
+    font-medium
+    text-white
+    rounded-full
+
+    bg-gradient-to-r
+    from-[#7c2ae8]
+    via-[#9b4dff]
+    to-[#ff5cf7]
+
+    shadow-[0_0_20px_rgba(155,77,255,0.45)]
+    md:shadow-[0_0_25px_rgba(155,77,255,0.5)]
+
+    transition-all
+    duration-500
+
+    hover:scale-[0.96]
+    hover:shadow-[0_0_45px_rgba(255,92,247,0.6)]
+    active:scale-95
+  "
             >
-              Download PDF
+              <span className="relative z-10 flex items-center gap-2">
+                Download PDF
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="
+        w-4 h-4
+        sm:w-5 sm:h-5
+        transition-transform
+        duration-300
+        group-hover:translate-y-[2px]
+      "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 16V4m0 12l-4-4m4 4l4-4M4 20h16"
+                  />
+                </svg>
+              </span>
             </button>
           </div>
 
           <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
             <div
+           
               className="
               
               w-full
@@ -104,6 +161,7 @@ const Pdf = () => {
             "
             >
               <textarea
+               
                 placeholder="Your text will appear here..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}

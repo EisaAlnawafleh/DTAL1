@@ -83,7 +83,7 @@ const [chatStarted] = useState(false);
 
             <Link href="/pdf">
               <div className="relative inline-block px-6 py-1 font-bold cursor-pointer group hover:opacity-80">
-                Speech To PDF
+                PDF
                 <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
               </div>
             </Link>

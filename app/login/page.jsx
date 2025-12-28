@@ -110,7 +110,7 @@ const Login = () => {
         <div className="hidden lg:flex w-1/2 text-white justify-center items-center relative overflow-hidden">
           <div className="flex flex-col text-center gap-3 max-w-[90%]">
             <div className="absolute top-0 right-0 ">
-              <Link href="/">
+              <Link href="/home">
                 <Image src="/img/img.png" alt="logo" width={160} height={60} />
               </Link>
             </div>

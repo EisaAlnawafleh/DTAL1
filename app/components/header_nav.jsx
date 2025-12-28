@@ -118,7 +118,7 @@ const Nav = () => {
               </Link>
               <Link  onClick={() => setOpen(false)} href="/pdf" className={linkClass("/pdf")}>
                 <div className="hover:text-purple-400 px-3 py-2">
-                  Speech To PDF
+                   PDF
                 </div>
               </Link>
             </div>
