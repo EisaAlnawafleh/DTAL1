@@ -31,7 +31,7 @@ export default function Splash() {
         <div className="pl__dot"></div>
         <div className="pl__text">Loading…</div>
       </div>
-      <div className={`moving-gradient mt-10 text-[30px]`}>WelCome To DTAL</div>
+      <div className={`moving-gradient mt-10 text-[30px] text-center`}>WelCome To DTAL</div>
     </div>
   );
 }
