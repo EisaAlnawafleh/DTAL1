@@ -39,7 +39,7 @@ const [chatStarted] = useState(false);
     >
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center justify-between">
-          <Link href="/">
+          <Link href="/home">
             <div
               data-aos="fade-right"
               className="text-header cursor-pointer mt-5 ml-10 text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#7220e4] to-[#f55cfe]"
@@ -60,7 +60,7 @@ const [chatStarted] = useState(false);
               chatStarted ? "ml-50" : "opacity-100"
             }`}
           >
-            <Link href="/">
+            <Link href="/home">
               <div className="relative inline-block px-6 py-1 font-bold cursor-pointer group hover:opacity-80">
                 Home
                 <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />

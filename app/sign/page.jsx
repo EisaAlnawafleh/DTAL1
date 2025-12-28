@@ -77,7 +77,7 @@ const SignUp = () => {
         >
         
           <div className="lg:hidden">
-            <Link href="/">
+            <Link href="/home">
               <Image src="/img/img.png" alt="logo" width={150} height={50} />
             </Link>
           </div>

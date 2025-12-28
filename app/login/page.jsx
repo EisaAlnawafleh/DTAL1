@@ -43,7 +43,7 @@ const Login = () => {
       >
         <form className="flex flex-col  justify-center items-center text-white w-full lg:w-1/2 px-6 py-12">
           <div className=" lg:hidden  ">
-            <Link href="/">
+            <Link href="/home">
               <Image src="/img/img.png" alt="logo" width={150} height={50} />
             </Link>
           </div>

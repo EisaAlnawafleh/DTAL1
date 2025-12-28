@@ -9,10 +9,10 @@ export default function Splash() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.replace("/home");
-    }, 2500); 
+    }, 2500);
 
     return () => clearTimeout(timer);
-  }, [router]);
+  }, []);
 
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center bg-[#1b1c1d]">

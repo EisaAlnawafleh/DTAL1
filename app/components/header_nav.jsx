@@ -96,7 +96,7 @@ const Nav = () => {
     ${open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}
   `}
         >
-          <Link href="/">
+          <Link href="/home">
             <div className="text-transparent px-3 py-2  bg-clip-text bg-gradient-to-r from-[#7220e4] to-[#f55cfe] font-bold">
               DTAL.COM
             </div>
