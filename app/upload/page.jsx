@@ -1,6 +1,6 @@
 "use client";
+import Image from "next/image";
 
-import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
@@ -97,11 +97,14 @@ const Upload = () => {
             >
               {videos.length === 0 && (
                 <>
-                  <img
+                  <Image
                     src="https://www.happyscribe.com/assets/uploader_file_illustration-e5c2f20e.svg"
-                    className="w-24 sm:w-28"
                     alt="upload"
+                    width={112}
+                    height={112}
+                    className="w-24 sm:w-28 h-auto"
                   />
+
                   <p className="text-white/80 text-sm sm:text-base text-center">
                     Drag & drop your videos here
                   </p>

@@ -6,20 +6,10 @@ import { useRouter } from "next/navigation";
 export default function Splash() {
   const router = useRouter();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/home");
-    }, 2500);
+ useEffect(() => {
+  router.replace("/home");
+}, [router]);
 
-    return () => clearTimeout(timer);
-  }, []);
 
-  return (
-    <div className="h-screen w-full flex items-center justify-center bg-[#1b1c1d]">
-      <div className="flex flex-col items-center gap-4 animate-pulse">
-        <img src="img/img.png" alt="Logo" className="w-[50%] h-[50%]" />
-        <p className="text-white text-sm tracking-widest">Welcome to DTAL...</p>
-      </div>
-    </div>
-  );
+  return null; 
 }

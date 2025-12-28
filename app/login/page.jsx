@@ -4,15 +4,17 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState("");
+  const [loading] = useState(false);
+  const [error] = useState("");
 
   useEffect(() => {
     AOS.init({

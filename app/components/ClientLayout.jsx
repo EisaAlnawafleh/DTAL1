@@ -1,20 +1,21 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useSelectedLayoutSegment } from "next/navigation";
 import Header from "../components/Header";
 import Nav from "../components/header_nav";
 
 export default function ClientLayout({ children }) {
-  const pathname = usePathname();
+  const segment = useSelectedLayoutSegment();
 
-  const hideNavbarRoutes = ["/", "/login", "/sign", "/auth", "/codex/edit"];
+ 
+  const hideNavbarSegments = [
+    null, 
+    "login",
+    "sign",
+    "auth",
+  ];
 
-  const hideNavbar = hideNavbarRoutes.some((route) => {
-    if (route === "/") {
-      return pathname === "/";
-    }
-    return pathname === route || pathname.startsWith(route + "/");
-  });
+  const hideNavbar = hideNavbarSegments.includes(segment);
 
   return (
     <>
@@ -24,7 +25,7 @@ export default function ClientLayout({ children }) {
             <Header />
           </div>
 
-          <div className="block [@media(min-width:900px)]:hidden sticky top-0 z-[9999]">
+          <div className="block [@media(min-width:900px)]:hidden sticky top-0 z-9999">
             <Nav />
           </div>
         </>

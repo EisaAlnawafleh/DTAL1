@@ -1,38 +1,39 @@
 "use client";
 
-import Link from "next/link";
+
 import { useState } from "react";
 import jsPDF from "jspdf";
 import TypedText1 from "../components/TypedText1";
 import SearchBox from "../components/SearchBox";
 
+
 const Pdf = () => {
   const [chatStarted, setChatStarted] = useState(false);
   const [text, setText] = useState("");
 
-  const startSpeech = () => {
-    const SpeechRecognition =
-      window.SpeechRecognition || window.webkitSpeechRecognition;
+  // const startSpeech = () => {
+  //   const SpeechRecognition =
+  //     window.SpeechRecognition || window.webkitSpeechRecognition;
 
-    if (!SpeechRecognition) {
-      alert("Speech Recognition is not supported in this browser");
-      return;
-    }
+  //   if (!SpeechRecognition) {
+  //     alert("Speech Recognition is not supported in this browser");
+  //     return;
+  //   }
 
-    const recognition = new SpeechRecognition();
-    recognition.lang = "en-US";
-    recognition.continuous = true;
+  //   const recognition = new SpeechRecognition();
+  //   recognition.lang = "en-US";
+  //   recognition.continuous = true;
 
-    recognition.onresult = (event) => {
-      let finalText = "";
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        finalText += event.results[i][0].transcript;
-      }
-      setText((prev) => prev + " " + finalText);
-    };
+  //   recognition.onresult = (event) => {
+  //     let finalText = "";
+  //     for (let i = event.resultIndex; i < event.results.length; i++) {
+  //       finalText += event.results[i][0].transcript;
+  //     }
+  //     setText((prev) => prev + " " + finalText);
+  //   };
 
-    recognition.start();
-  };
+  //   recognition.start();
+  // };
 
   const downloadPDF = () => {
     if (!text.trim()) {
@@ -46,8 +47,9 @@ const Pdf = () => {
   };
 
   return (
-    <div
-      className="
+    <>
+      <div
+        className="
   bg-[#101019]
   w-screen
   min-h-screen
@@ -59,32 +61,34 @@ const Pdf = () => {
   flex
   flex-col
 "
-    >
-      <div
-        className={`transition-all duration-700 ${
-          chatStarted ? "opacity-0 scale-95 pointer-events-none" : "opacity-100"
-        }`}
       >
-        <div className="text-center text-[48px] pdf_text">
-          <TypedText1 />
-        </div>
-        <div className="flex items-center justify-center  mt-15 ">
-          <button
-            onClick={downloadPDF}
-            className="
+        <div
+          className={`transition-all duration-700 ${
+            chatStarted
+              ? "opacity-0 scale-95 pointer-events-none"
+              : "opacity-100"
+          }`}
+        >
+          <div className="text-center text-[48px] pdf_text">
+            <TypedText1 />
+          </div>
+          <div className="flex items-center justify-center  mt-15 ">
+            <button
+              onClick={downloadPDF}
+              className="
             text-[20px]
                 hover:underline
                 underline-offset-4
                 transition-all duration-500 hover:scale-95
               "
-          >
-            Download PDF
-          </button>
-        </div>
+            >
+              Download PDF
+            </button>
+          </div>
 
-        <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
-          <div
-            className="
+          <div className="flex justify-center items-center pdf_text_2 mt-15 flex-col px-6">
+            <div
+              className="
               
               w-full
               max-w-[900px]
@@ -98,13 +102,13 @@ const Pdf = () => {
               shadow-[0_20px_60px_rgba(0,0,0,0.4)]
               p-4
             "
-          >
-            <textarea
-              placeholder="Your text will appear here..."
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              rows={3}
-              className="
+            >
+              <textarea
+                placeholder="Your text will appear here..."
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                rows={3}
+                className="
     w-full
     text-[20px]
     bg-transparent
@@ -118,15 +122,16 @@ const Pdf = () => {
     max-h-[120px]
     scrollbar-none
   "
-            />
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="fixed w-full bottom-0">
-        <SearchBox onSend={() => setChatStarted(true)} />
+        <div className="fixed w-full bottom-0">
+          <SearchBox onSend={() => setChatStarted(true)} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

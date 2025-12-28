@@ -4,44 +4,30 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TypedText from "../components/TypedText";
-
 import Snowfall from "react-snowfall";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [user, setUser] = useState(null);
   const [chatStarted, setChatStarted] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-
     AOS.init({
       duration: 800,
       easing: "ease-out-cubic",
       once: true,
       mirror: false,
     });
-
-    const savedUser = localStorage.getItem("user");
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
   }, []);
 
   return (
     <div className=" text-white h-full w-full pt-30">
-      {mounted && (
-        <div
-          className={`transition-all duration-700 ${
-            chatStarted
-              ? "opacity-0 scale-95   pointer-events-none"
-              : "opacity-100"
-          }`}
-        >
-          <Snowfall />
-        </div>
-      )}
+      <div
+        className={`transition-all duration-700 ${
+          chatStarted ? "opacity-0 scale-95 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        <Snowfall />
+      </div>
 
       <div
         className={`transition-all duration-700 ${
@@ -55,7 +41,7 @@ export default function Home() {
           <TypedText />
         </div>
 
-        <div className="relative flex justify-center flex-col  items-center ">
+        <div className="relative flex justify-center flex-col items-center">
           <Image
             data-aos="fade-down"
             src="/img/Digital.png"
@@ -65,7 +51,7 @@ export default function Home() {
             className="home_icon"
           />
 
-          <div className="Header-icon-text body_icon  text-center absolute bottom-0">
+          <div className="Header-icon-text body_icon text-center absolute bottom-0">
             <div data-aos="fade-up" className="home_text_body text-3xl">
               DTAL
             </div>

@@ -20,7 +20,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const hideNavbarRoutes = ["/login", "/sign" ];
+  // const hideNavbarRoutes = ["/login", "/sign" ];
   return (
     <html lang="en">
       <body

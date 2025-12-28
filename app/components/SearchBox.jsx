@@ -55,11 +55,16 @@ export default function SearchBox({ onSend }) {
 
           <div className="absolute bottom1 right-2 bottom-6">
             <button
-              onClick={() => {
-                if (!canSend) return;
-                onSend && onSend(value);
-                setValue("");
-              }}
+             onClick={() => {
+  if (!canSend) return;
+
+  if (onSend) {
+    onSend(value);
+  }
+
+  setValue("");
+}}
+
               className={`rounded-lg p-2 bottom3 bg-white/25 text-white transition-all duration-300
                 ${
                   canSend
